@@ -18,5 +18,5 @@ from django.contrib import admin
 from light import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^test/?$', views.test_view.as_view()),
+    url(r'^update_light/?$', views.update_light.as_view()),
 ]

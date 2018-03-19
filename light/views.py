@@ -5,6 +5,8 @@ from django.template import loader
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
+from light.models import light
+
 import json
 
 class HttpUtil(object):
@@ -17,8 +19,10 @@ class HttpUtil(object):
             input_data=request.data
         return input_data
 
-class test_view(APIView):   
+class update_light(APIView):   
     def post(self, request):
         httpUtil = HttpUtil()
         request_data = httpUtil.getRequestData(request)
+        save_light = light(intensity = int(request_data['intensity']))
+        save_light.save()
         return Response(request_data)
