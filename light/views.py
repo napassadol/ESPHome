@@ -26,3 +26,10 @@ class update_light(APIView):
         save_light = light(intensity = int(request_data['intensity']))
         save_light.save()
         return Response(request_data)
+
+def monitor(request):
+    template = loader.get_template('monitor.html')
+    data = {
+        "intensity" : light.objects.last().intensity
+    }
+    return HttpResponse(template.render(data, request))

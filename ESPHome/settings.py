@@ -25,7 +25,7 @@ SECRET_KEY = 'ukj=3b8z-^2q_6!p8si5#x&%3-=*^2o2i!i&fg^411j!9=$g63'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['esp-env.patbe7p2im.ap-southeast-1.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['esp-env.efvvci2m5z.ap-southeast-1.elasticbeanstalk.com']
 
 
 # Application definition
@@ -56,7 +56,7 @@ ROOT_URLCONF = 'ESPHome.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/light/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

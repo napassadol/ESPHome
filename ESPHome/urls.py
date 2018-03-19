@@ -19,4 +19,5 @@ from light import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^update_light/?$', views.update_light.as_view()),
+    url(r'^monitor/?$', views.monitor)
 ]
